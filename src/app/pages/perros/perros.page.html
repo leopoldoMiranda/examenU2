@@ -1,0 +1,57 @@
+<!-- ----------------------------------------- -->
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start" >
+      <ion-back-button 
+                      text="Regresar"
+                      color="success"
+                      defaultHref='/inicio'
+      >
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="success">Dogs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- ----------------------------------------- -->
+
+<ion-content>
+
+  <!-- <ion-item>
+    <ion-thumbnail slot="start">
+      <ion-img [src]=perro></ion-img>
+    </ion-thumbnail>
+    <ion-label>{{perro}}</ion-label>
+  </ion-item> -->
+
+  <ion-card>
+    <ion-img style="width: auto; height: 300px;" [src]=perro></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle color="success">Raza:</ion-card-subtitle>
+      <ion-card-title>{{razaPerro}}</ion-card-title>
+    </ion-card-header>
+
+  
+    <ion-card-content>
+      <ion-card-subtitle color="success">URL:</ion-card-subtitle>
+      {{perro}}
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-button 
+              class="tamano"
+              fill="outline"
+              color="success" 
+              expand="block" 
+              (click)="getPerros()">
+              <ion-icon name="refresh-outline" slot="start"></ion-icon>
+    Generar otro perro
+  </ion-button>
+
+
+</ion-content>
+
+<!-- ----------------------------------------- -->
